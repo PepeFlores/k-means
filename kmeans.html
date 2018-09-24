@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../kmeans/fondo.png) fixed center center;
+  background-size: cover;
+  color:white;
+  text-align: justify;
+}
+
+.topnav { 
+  overflow: hidden;
+  background-color: rgba(2, 58, 75, 0.918);
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color:white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: rgb(180, 224, 245);
+  color: black;
+}
+
+.active {
+  background-color: rgb(1, 45, 63);
+}
+
+</style>
+</head>
+
+<body>
+  <div class="topnav" id="myTopnav">
+    <a href="#inicio" class="active">Desarrollo Colavorativo</a>
+  </div>
+  <div class="container" style="padding-left:16px; padding-right: 16px">
+    <h2>K-means</h2>
+    <p>K-means es un algoritmo de agrupamiento.
+      El objetivo del algoritmo es encontrar grupos entre datos crudos.
+      El agrupamiento se realiza minimizando la suma de distancias entre cada objeto y el centroide de su grupo o
+      cluster.</p>
+
+    <ol>1.- Inicialización: una vez escogido el número de grupos, k, se establecen k centroides en el espacio de los
+      datos, por ejemplo, escogiéndolos aleatoriamente.</ol>
+    <ol>2.- Asignación objetos a los centroides: cada objeto de los datos es asignado a su centroide más cercano.</ol>
+    <ol>3.- Actualización centroides: se actualiza la posición del centroide de cada grupo tomando como nuevo centroide
+      la posición del promedio de los objetos pertenecientes a dicho grupo.</ol>
+    <p>Se repiten los pasos 2 y 3 hasta que los centroides no se mueven, o se mueven por debajo de una distancia umbral
+      en cada paso.</p>
+
+    <h2>Pruébalo </h2>
+    <p>Numero de Clusters: <input type="number"></p>
+    <p>Base de datos: <input type="text"></p>
+    <button type="button" class="btn btn-primary">Calcular</button>
+  </div>
+
+</body>
+
+</html>
